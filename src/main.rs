@@ -1,6 +1,7 @@
 use clap::Parser;
 use std::io::{self, Write};
 
+
 /// Search for a pettern in a file and display the lines that cointain it.
 #[derive(Parser)]
 struct Cli {
@@ -12,7 +13,7 @@ struct Cli {
 
 
 fn main() {
-    let stdout = io::stdout(); // get the global stdout entity
+    let stdout = io::stdout();
     let mut handle = io::BufWriter::new(stdout);
 
     let args = Cli::parse();
